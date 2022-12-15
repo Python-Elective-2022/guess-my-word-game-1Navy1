@@ -1,4 +1,4 @@
-#On this project I have collaborated with the following student(s) (if any) : Tan
+#On this project I have collaborated with the following student(s) (if any) : Tan and Nin
 # -----------------------------------
 # Helper code
 # You don't need to understand this helper code,
