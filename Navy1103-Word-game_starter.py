@@ -1,4 +1,4 @@
-#On this project I have collaborated with the following student(s) (if any) : Tan and Nin
+#On this project I have collaborated with the following student(s) (if any) : Tan
 # -----------------------------------
 # Helper code
 # You don't need to understand this helper code,
@@ -49,10 +49,8 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
     # FILL IN YOUR CODE HERE...
-    for i in secret_word:
-        if i in letters_guessed:
-            pass
-        else:
+    for letter in secret_word:
+        if letter not in letters_guessed:
             return False
     return True 
         
@@ -75,9 +73,10 @@ def get_guessed_word(secret_word, letters_guessed):
     '''
     # FILL IN YOUR CODE HERE...
     guess_word = ""
-    for i in secret_word:
-        if i in letters_guessed:
-            guess_word += i
+    letters = ""
+    for letters in secret_word:
+        if letters in letters_guessed:
+            guess_word += letters
         else:
             guess_word += "_ "
     return guess_word
@@ -101,7 +100,7 @@ def get_available_letters(letters_guessed):
       yet been guessed.
     '''
     # FILL IN YOUR CODE HERE...   
-    letters_not_guessed = "abcdefghijklmnopqrstuvwxyz"
+    letters_not_guessed = string.ascii_lowercase
     for char in letters_guessed:
         letters_not_guessed = letters_not_guessed.replace(char, "")
     return letters_not_guessed
